@@ -20,7 +20,7 @@ public class Tile : MonoBehaviour {
         transform.position = new Vector2(nextMove.x + transform.position.x, nextMove.y + transform.position.y);
     }
 
-    //with more development time, instead of deleting and spawning new tiles, I'd probably try having a constant pool of tiles and just move them around appropriately
+    //TODO: try having a constant pool of tiles and just move them around appropriately
     private IEnumerator DestroySelf(float delay) {
         yield return new WaitForSeconds(delay);
         Destroy(gameObject);

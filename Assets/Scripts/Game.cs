@@ -63,7 +63,7 @@ public class Game : MonoBehaviour {
         StartCoroutine(AdjustTimeScale(0.5f, 0.2f));
 
         //generate the level
-        StartCoroutine(AddCorridorTiles(0.1f));
+        StartCoroutine(AddCorridorTiles(0.1f, 0.1f));
         StartCoroutine(AddObstacleTiles(10f, 1f));
 
         //start incrementing the score, it increases by 1 every time an obstacle is passed
@@ -99,7 +99,8 @@ public class Game : MonoBehaviour {
         Time.timeScale = 1f;
     }
 
-    private IEnumerator AddCorridorTiles(float frequency) {
+    private IEnumerator AddCorridorTiles(float startDelay, float frequency) {
+        yield return new WaitForSeconds(startDelay);
         while (true) {
             AddTile(TileType.ceiling, CorridorHeight() / 2f);
             AddTile(TileType.floor, -CorridorHeight() / 2f);
