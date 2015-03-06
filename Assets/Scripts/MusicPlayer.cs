@@ -1,5 +1,4 @@
-﻿//Copyright Nicolas Lagoutte 2015
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour {
 

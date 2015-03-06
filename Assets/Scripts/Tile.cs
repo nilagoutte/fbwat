@@ -1,5 +1,4 @@
-﻿//Copyright Nicolas Lagoutte 2015
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class Tile : MonoBehaviour {
