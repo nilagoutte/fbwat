@@ -1717,6 +1717,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1009340340}
   - 114: {fileID: 1009340341}
+  - 95: {fileID: 1009340342}
   m_Layer: 0
   m_Name: Sun
   m_TagString: Untagged
@@ -1751,6 +1752,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ec4e1ab82c85f647ab636e22151cae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1009340342
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1009340339}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f1966c6fb44779d449a008971d0da136, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1040854247
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,9 +1808,9 @@ MonoBehaviour:
   titleText: {fileID: 999543198}
   instructionText: {fileID: 473334025}
   bestScoreText: {fileID: 1106008121}
-  bestScoreKeeper: {fileID: 715694340}
   levelConstructionDelay: 1
   gameStartTime: 8
+  sunAnimator: {fileID: 1009340342}
 --- !u!4 &1040854249
 Transform:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class Game : MonoBehaviour {
     //gameStartTime is the delay before the player actually starts controlling the character
     public float gameStartTime = 8f;
     public TwistLayout currentLayout;
+    public Animator sunAnimator;
 
     private BestScoreKeeper bestScoreKeeper;
     private Dictionary<TileType, string> tilePrefabPaths;
@@ -116,6 +117,7 @@ public class Game : MonoBehaviour {
             float r = Random.Range((-CorridorHeight() / 2f) + 3f, (CorridorHeight() / 2f)) - 3f;
             AddTile(TileType.obstacle, r - 3f);
             AddTile(TileType.obstacle, r + 3f);
+            sunAnimator.SetTrigger("ObstacleFired");
             yield return new WaitForSeconds(frequency);
         }
     }
